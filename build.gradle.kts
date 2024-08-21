@@ -8,7 +8,6 @@ buildscript {
     repositories {
         mavenCentral()
         google()
-        jcenter()
     }
 
     dependencies {
@@ -23,11 +22,9 @@ allprojects {
     repositories {
         mavenCentral()
         google()
-        jcenter()
     }
 }
 
 tasks.register("clean", Delete::class) {
     delete(buildDir)
 }
-
