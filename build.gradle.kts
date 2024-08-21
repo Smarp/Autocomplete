@@ -14,14 +14,16 @@ buildscript {
         val kotlinVersion = property("kotlinVersion") as String
         classpath("com.android.tools.build:gradle:3.6.1")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
-        classpath("com.otaliastudios.tools:publisher:0.1.5")
     }
 }
 
 allprojects {
     repositories {
-        mavenCentral()
         google()
+        mavenCentral()
+        maven {
+            url = uri("https://jitpack.io")
+        }
     }
 }
 
